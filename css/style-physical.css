@@ -1,0 +1,266 @@
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root{
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--gray30);
+  font-family: charter;
+  /* font-family: 'roboto', sans-serif; */
+  margin: 0;
+
+}
+
+.header{
+  /* border: 1px solid red; */
+  position: sticky;
+  top: 0;
+}
+
+.header-content{
+  position: relative;
+}
+
+.wrapper{
+  width: 902px;
+  margin: auto;
+}
+
+
+
+.debug{
+  box-shadow: inset 0 0 0 1px red;
+  outline: 1px solid red;
+}
+
+hr{
+  margin: 64px 0;
+}
+
+a {
+  color: var(--gray30);
+}
+
+header{
+  /* cambiar valor de una variable  */
+  /* --gray10: red; */
+  font-size: 14px;
+  color: var(--gray10);
+  /* position: absolute; su ubicacion sera la mas cercana al dom amenos que el sucedor tenga relative*/
+  /* position: relative; mantiene su espacio de contenedor en donde se encuentra*/
+  /* position: fixed; */
+  /* position: sticky; */
+  /* valores a usar cuando se usan position : top right bottom left z-index */
+  position: absolute;
+  /* background: red; */
+  top: 64px;
+  left: -232px;
+  width: 188px;
+}
+
+header li{
+  margin-bottom: 16px;
+}
+
+header a{
+  color: var(--gray10);
+  text-decoration: none;
+}
+
+header a:hover{
+  color: var(--gray30);
+}
+
+nav details summary{
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h1 + p{
+  margin-bottom: 64px;
+}
+
+h1{
+  font-size: 60px;
+  margin-top: 64px;
+  /* margin-bottom: 16px;
+  margin-left: 20px;
+  margin-right: 10px; */
+  /* margin: top right bottom left; */
+  /* margin: 64px 10px 16px 20px;
+  margin: 10px 5px;
+  margin: 30px 20px 10px; */
+  font-weight: normal;
+}
+
+h2{
+  font-size: 2em;
+  margin: 64px 0 40px;
+  font-weight: normal;
+}
+
+h3{
+  font-size: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  position: sticky;
+  top: 0;
+  background: white;
+
+}
+
+pre{
+  background-color: #FEC62E;
+  padding: 40px;
+  font-family: 'roboto';
+  line-height: 24px;
+}
+
+blockquote{
+  font-size: 24px;
+  border-left: 4px solid var(--gray30);
+  margin: 32px 0;
+  padding-left: 16px;
+  line-height: 24px;
+}
+
+blockquote span{
+  color: var(--gray10);
+}
+
+blockquote span::before{
+  content: '-';
+}
+
+.hero{
+  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent),url('../img/patron.png');
+  /* background-repeat: no-repeat; */
+  /* background-position: left 50px bottom -50px; */
+  /* background-size: cover; */
+  height: 350px;
+}
+
+.section-content{
+  margin-top: 164px;
+  position: relative;
+}
+
+.section-content:first-of-type{
+  margin: 0;
+}
+
+.section-content ol li{
+  line-height: 24px;
+}
+
+.section-content ul li{
+  margin-bottom: 16px;
+}
+
+.section-content img{
+  margin-top: 40px;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) '. ';
+}
+
+.section-content h3::after{
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.section-content{
+  counter-reset: titleList;
+}
+
+.section-content h3{
+  counter-increment: titleList;
+  padding-bottom: 8px;
+}
+
+
+/* .slider{
+  border: 2px solid red;
+} */
+
+.slider-container{
+  /* border: 1px solid blue; */
+  /* margin: 30px; */
+  /* block-size: 100px; */
+  display: block;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+/* .slider-slide h1{
+  margin: 0;
+  display: inline-block;
+  inline-size: 100%;
+  border: 1px solid purple;
+} */
+
+.video {
+  margin: 0;
+  display: inline-block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16/9;
+  /* border: 1px solid purple; */
+}
+
+.slider-bullet-list{
+  text-align: center;
+  margin-block-start: 10px;
+}
+
+.slider-bullet{
+  display:inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: red;
+  border-radius: 50%;
+}
